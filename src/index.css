@@ -25,6 +25,11 @@ body {
   align-items: center;
 }
 
+.flex-notcenter {
+  display: flex;
+  align-items: center;
+}
+
 section.welcomePage {
   background-image: url("./assets/welcome.jpg");
   background-repeat: no-repeat;
@@ -61,7 +66,7 @@ section.welcomePage .content {
   padding: 30px;
   padding-top: 10px;
   height: auto;
-  width: 500px;
+  width: 1000px;
   background-color: rgb(83, 127, 41, 0.7);
   border-radius: 10px;
   text-align: center;
@@ -79,13 +84,12 @@ section.welcomePage .content > h1 {
 
 section.welcomePage input[type="text"] {
   border: 0px;
-  width: 80%;
+  width: 100%;
   padding: 3px;
   font-size: 16px;
   border-radius: 10px;
   height: 40px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  
 }
 
 input:focus {
@@ -99,8 +103,7 @@ input:focus {
   font-size: 16px;
   border-radius: 10px;
   height: 40px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -124,6 +127,7 @@ input:focus {
 /*the container must be positioned relative:*/
 .autocomplete {
   position: relative;
+  flex-grow: 1;
 }
 
 .autocomplete-items {
@@ -166,6 +170,17 @@ input:focus {
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
+
+.actor-connector {
+  margin: 0 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .selected_Ingredient {
   margin-top: 10px;
@@ -503,4 +518,9 @@ input:focus {
   .logo .logo_text {
     font-size: 1.2rem;
   }
+
+  .divAutocomplete {
+    flex-direction: column;
+  }
+
 }
