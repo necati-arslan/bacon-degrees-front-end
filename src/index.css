@@ -181,344 +181,68 @@ input:focus {
   justify-content: center;
 }
 
-
-.selected_Ingredient {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-  gap: 5px;
-  justify-content: flex-start;
+.ConnectionCards{
 }
 
-.selected_Ingredient > div {
-  padding: 5px;
-  border-radius: 10px;
-  /* background-color: rgb(53 78 30); */
-  color: #f9f4f4;
-  font-weight: bolder;
-  border: 1px solid #0e550e;
-  position: relative;
-}
-
-.selected_Ingredient .cancel {
-  position: absolute;
-  top: -12px;
-  right: -1px;
-  cursor: pointer;
-}
-
-.selected_Ingredient .cancel:hover {
-  color: red;
-}
-
-.recipes {
-  padding-top: 30px;
-}
-
-.recipes > .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.recipes .recipe {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #0e550e;
-  border-radius: 10px;
-  max-width: 300px;
-}
-
-.recipe_img img {
-  border: 1px solid gray;
-  border-left: 0px;
-  border-top: 0px;
-  width: 100%;
-  border-radius: 10px;
+.connectionCardsContent{
+  margin-top: 20px;
+  padding: 30px;
+  padding-top: 10px;
   height: auto;
-}
-
-.recipe_title {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-  font-weight: 900;
+  width: 1000px;
+  background-color: rgba(252, 252, 252, 0.7);
+  border-radius: 10px;
   text-align: center;
 }
-.recipe .item.ingredient {
-  padding-left: 5px;
-}
-.recipe .item.button {
-  margin: 5px;
-}
-.used_ingredients {
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 5px;
-}
 
-.missed_ingredients {
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 5px;
-}
 
-.used_ingredients img {
-  width: 30px;
-  max-height: 82px;
-}
-.missed_ingredients img {
-  width: 30px;
-  max-height: 82px;
-}
-.title_used {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  font-weight: 700;
-  color: #0e550e;
-}
-
-.title_missed {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  font-weight: 700;
-  color: #c72e2e;
-  margin-top: 10px;
-}
-
-.detail_recipe {
-  margin-top: 30px;
-  padding-bottom: 50px;
-}
-
-.detail_recipe .recipe_header {
-  gap: 10px;
-  align-items: flex-start;
-}
-
-.detail_recipe .recipe_header img {
-  height: 300px;
-  width: auto;
-  border-radius: 10px;
-}
-
-.detail_recipe .recipe_header .nutrient {
-  margin-top: 10px;
-}
-
-.detail_recipe .recipe_header .nutrient hr {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.detail_recipe .recipe_header .nutrient .values {
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
-}
-
-.detail_recipe .recipe_header .nutrient .values strong {
-  color: #0e550e;
-  font-size: 1.2rem;
-}
-
-.ingredients {
-  margin-top: 20px;
-}
-
-.ingredients > h3 {
-  margin-top: 20px;
-  color: #0e550e;
-  margin-bottom: 10px;
-}
-
-.ingredients > ul {
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  padding-left: 20px;
-}
-
-.direction {
-  margin-top: 20px;
-}
-
-.direction h3 {
-  margin-top: 20px;
-  color: #0e550e;
-  margin-bottom: 10px;
-}
-
-.addRecipeBook {
-  cursor: pointer;
-}
-.addRecipeBook:hover {
-  color: green;
-}
-
-.recipeBook {
-  margin-top: 10px;
-  padding-bottom: 50px;
-}
-
-.recipeBook .listRecipe {
-  margin-top: 10px;
-  list-style: none;
-  text-align: left;
-}
-
-.recipeBook .listRecipe li {
-  padding: 5px;
-  cursor: pointer;
-}
-.recipeBook .listRecipe li:hover {
-  background-color: #d4d4d4;
-}
-
-.recipeBookLandingPage {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  color: white;
-  cursor: pointer;
-}
-.recipeBookLandingPage a {
-  text-decoration: none;
-  color: white;
-}
-
-.pagination {
+.icon-with-label {
   display: flex;
-  list-style: none;
-  justify-content: center;
-  width: 100%;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 12px;
 }
 
-.pagination li {
-  padding: 5px 10px;
-  border: 1px solid green;
-  cursor: pointer;
-  margin-right: 5px;
+.icon {
+  font-size: 24px;
+  color: #333;
 }
 
-.pagination li.active {
-  background-color: #0e550e;
+.label {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #555;
+  font-family: monospace;
 }
 
-.pagination li:hover {
-  background-color: #a6a2a2;
-}
-/*loading*/
-.loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #0e550e;
-  width: 80px;
-  height: 80px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
-  margin: auto;
-  margin-top: 20px;
+.arrow {
+  font-size: 18px;
+  color: #888;
+  margin: 0 6px;
 }
 
-/* Safari */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/*loading*/
 
-.notify {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  color: #721c24;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-  padding: 5px 20px;
-  border-radius: 10px;
-  animation: shake 0.5s;
-  animation-iteration-count: 2;
-}
 
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
-  .detail_recipe {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .detail_recipe .recipe_header {
-    flex-direction: column;
-  }
-
-  .detail_recipe .recipe_header img {
-    height: 180px;
-    width: auto;
-    border-radius: 10px px;
-  }
-
-  .detail_recipe .ingredients ul {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
-    gap: 20px;
-  }
-  .detail_recipe .direction {
-    padding: 0px 20px;
-  }
-  .logo .logo_text {
-    font-size: 1.2rem;
-  }
-
+  
   .divAutocomplete {
     flex-direction: column;
   }
