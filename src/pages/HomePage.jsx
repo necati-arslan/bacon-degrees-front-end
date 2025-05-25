@@ -77,7 +77,7 @@ function HomePage() {
 
      <div className="container flex">
       <div className='content'>
-            <h1>Let's Find Recipe by Ingredients</h1>
+            <h1>Laten we de connectie tussen twee acteurs vinden</h1>
            <div className='flex-notcenter  divAutocomplete'>
                   <div className='autocomplete'>
                             

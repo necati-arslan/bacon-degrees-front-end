@@ -1,6 +1,7 @@
 import React from 'react'
 import { useConnections } from '../hooks/useConnections'
-import { FaUser, FaFilm, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
+import ConnectionCard from './ConnectionCard';
 
 function ConnectionCards({ actor1, actor2 }) {
 
@@ -12,6 +13,7 @@ function ConnectionCards({ actor1, actor2 }) {
 
 
                 const renderPath = () => {
+                     
                         const elements = [];
 
                         data.path.forEach((step, index) => {
@@ -20,17 +22,11 @@ function ConnectionCards({ actor1, actor2 }) {
                             const [, fromActor, movie, toActor] = match;
 
                             elements.push(
-                                <React.Fragment key={`actor-${index}`}>
-                                <div className="icon-with-label">
-                                    <FaUser className="icon" />
-                                    <span className="label">{fromActor}</span>
-                                </div>
-                                <FaArrowRight className="arrow" />
-                                <div className="icon-with-label">
-                                    <FaFilm className="icon" />
-                                    <span className="label">{movie}</span>
-                                </div>
-                                <FaArrowRight className="arrow" />
+                               <React.Fragment key={`step-${index}`}>
+                                    <ConnectionCard type="actor" id={fromActor} />
+                                    <FaArrowRight className="arrow" />
+                                    <ConnectionCard type="movie" id={movie} />
+                                    <FaArrowRight className="arrow" />
                                 </React.Fragment>
                             );
                             }
@@ -41,12 +37,8 @@ function ConnectionCards({ actor1, actor2 }) {
                         const lastActor = lastMatch?.[1];
 
                         if (lastActor) {
-                            elements.push(
-                            <div key="last-actor" className="icon-with-label">
-                                <FaUser className="icon" />
-                                <span className="label">{lastActor}</span>
-                            </div>
-                            );
+                                 elements.push(<ConnectionCard key="last-actor" type="actor" id={lastActor} />);
+
                         }
 
                         return elements;
@@ -58,25 +50,16 @@ function ConnectionCards({ actor1, actor2 }) {
   return (
     <div className=" container flex">
         <div className='connectionCardsContent'>
-                <h1>ConnectionCards</h1>
-                <hr></hr>
-                 <p><strong>Actor 1:</strong> {actor1.primaryName}</p>
-      <p><strong>Actor 2:</strong> {actor2.primaryName}</p>
-
-                <h2>Connection Path</h2>
-        {data.found ? (
-          <ul>
-            {data.path.map((step, index) => (
-              <li key={index}>{step}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>{data.message || "No connection found."}</p>
-        )}
-
+                
+                <h2>Verbindingspad</h2>
+        
 
          <div className='flex' >
-          {renderPath()}
+                {!data.found ? (
+                    <p>{data.message || "No connection found."}</p>
+                ) : (
+                    renderPath()
+                )}        
         </div>
 
         </div>
