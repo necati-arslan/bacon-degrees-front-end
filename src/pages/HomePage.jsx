@@ -3,20 +3,30 @@ import companyLogo from "../assets/logo.png";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useActors } from "../hooks/useActors";
+import ConnectionCards from '../components/ConnectionCards';
 
 
 
 
 function HomePage() {
     
-    const [inputValue1, setInputValue1] = useState(""); // Actor 1
-    const [inputValue2, setInputValue2] = useState(""); // Actor 2
+    const [inputValue1, setInputValue1] = useState(""); 
+    const [inputValue2, setInputValue2] = useState(""); 
 
     const [dropdownMenu1, setDropdownMenu1] = useState(false);
     const [dropdownMenu2, setDropdownMenu2] = useState(false);
 
     const { actors: actors1, loading: loading1, error: error1 } = useActors(inputValue1);
     const { actors: actors2, loading: loading2, error: error2 } = useActors(inputValue2);
+
+    const [actor1, setActor1] = useState(null); // Actor 1
+    const [actor2, setActor2] = useState(null); // Actor 2
+
+    const [queryActors, setQueryActors] = useState({ actor1: null, actor2: null });
+    const [showConnectionCards, setShowConnectionCards] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
+
+
 
 
 
@@ -28,17 +38,28 @@ function HomePage() {
 
 
   const handleSelect1 = (actor) => {
-    console.log(actor);
     setInputValue1(actor.primaryName);
+    setActor1(actor)
     setDropdownMenu1(false);
   };
 
    const handleSelect2 = (actor) => {
-    console.log(actor);
     setInputValue2(actor.primaryName);
+    setActor2(actor)
     setDropdownMenu2(false);
   };
 
+
+    const handleFindClick = () => {
+    if (!actor1?.primaryName || !actor2?.primaryName) {
+      setErrorMessage("Please fill in both fields.");
+      setShowConnectionCards(false);
+    } else {
+      setErrorMessage("");
+      setQueryActors({ actor1, actor2 });
+      setShowConnectionCards(true);
+    }
+  };
 
 
 
@@ -62,6 +83,7 @@ function HomePage() {
                             
                                 <input
                                 type="text"
+                                autoComplete="off"
                                 name="Acteur1"
                                 placeholder="Eerste Acteur of actrice"
                                 value={inputValue1}
@@ -100,6 +122,7 @@ function HomePage() {
                      <div className='autocomplete'>
                                      <input
                                         type="text"
+                                        autoComplete="off"
                                         name="Acteur2"
                                         placeholder="Tweede Acteur of actrice"
                                         value={inputValue2}
@@ -137,22 +160,29 @@ function HomePage() {
 
                       </div>                  
             </div>
-            <div>
-                   <Link to={"/"}>
-                    <button className="btn-red" >
+            <div className="container flex">
+                    <button className="btn-red"
+                      onClick={handleFindClick}
+                    >
                       Find
                     </button>
-                  </Link> 
-            </div>
-              
 
+            </div>
+             <div>   {errorMessage && (
+                    <div className="error-message" style={{ color: "red", marginTop: "10px" }}>
+                      {errorMessage}
+                    </div>
+                  )}</div>  
 
         </div>
 
+      </div>
+      <div>
+               {showConnectionCards && queryActors.actor1 && queryActors.actor2 && (
+                 <ConnectionCards actor1={queryActors.actor1} actor2={queryActors.actor2} />
+                   )}
 
       </div>
-
-
 
     </section>
   )
