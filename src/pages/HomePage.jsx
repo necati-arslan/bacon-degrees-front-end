@@ -1,5 +1,4 @@
 import React from 'react'
-import companyLogo from "../assets/logo.png";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useActors } from "../hooks/useActors";
@@ -52,7 +51,7 @@ function HomePage() {
 
     const handleFindClick = () => {
     if (!actor1?.primaryName || !actor2?.primaryName) {
-      setErrorMessage("Please fill in both fields.");
+      setErrorMessage(" Vul beide velden in, alstublieft.");
       setShowConnectionCards(false);
     } else {
       setErrorMessage("");
@@ -66,14 +65,7 @@ function HomePage() {
 
   return (
     <section className="welcomePage">
-      <div className="logo">
-        <div className="flex">
-          <img src={companyLogo} alt="" />
-          <div className="logo_text">
-            <span> Find</span>Recipe<span>By</span>Ingredients
-          </div>
-        </div>
-      </div>
+      
 
      <div className="container flex">
       <div className='content'>
@@ -164,12 +156,12 @@ function HomePage() {
                     <button className="btn-red"
                       onClick={handleFindClick}
                     >
-                      Find
+                      Zoeken
                     </button>
 
             </div>
              <div>   {errorMessage && (
-                    <div className="error-message" style={{ color: "red", marginTop: "10px" }}>
+                    <div className="error-message" style={{ color: "#e9c112", marginTop: "10px" }}>
                       {errorMessage}
                     </div>
                   )}</div>  
