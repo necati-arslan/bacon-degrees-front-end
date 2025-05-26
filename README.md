@@ -4,6 +4,4 @@
 
 ---
 
-<p align="center">
-  <img src="assets/kevinapp.PNG"  width="600"/>
-</p>
+![Uygulama Önizlemesi](assets/kevinapp.png)
