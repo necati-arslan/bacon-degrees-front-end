@@ -10,9 +10,9 @@
 
 ## 📁 Project Folder Structure
 
-
 public/
 └── vite.svg
+
 src/
 ├── App.css
 ├── App.jsx
@@ -43,3 +43,4 @@ src/
 │ └── HomePage.jsx
 └── routes/
 └── router.jsx
+
