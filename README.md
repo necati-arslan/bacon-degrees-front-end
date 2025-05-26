@@ -4,7 +4,7 @@
 
 ---
 
-![Uygulama Önizlemesi](src/assets/kevinapp.PNG)
+![preview](src/assets/kevinapp.PNG)
 
 ## 📁 Project Folder Structure
 
