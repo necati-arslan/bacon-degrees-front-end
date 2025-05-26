@@ -7,7 +7,7 @@ const router = createBrowserRouter([
   { path: "/", element: <Layout />,
     children: [
       {
-        index: true, // == path: "" yani sadece "/"
+        index: true, 
         element: <HomePage />,
       },
       {
