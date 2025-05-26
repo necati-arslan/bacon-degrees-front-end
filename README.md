@@ -5,3 +5,52 @@
 ---
 
 ![Uygulama Önizlemesi](src/assets/kevinapp.PNG)
+
+
+
+|   index.html
+|   package-lock.json
+|   package.json
+|   README.md
+|   structure.txt
+|   vite.config.js|           
++---public
+|       vite.svg
+|       
+\---src
+    |   App.css
+    |   App.jsx
+    |   index.css
+    |   main.jsx
+    |   
+    +---api
+    |       actors.js
+    |       connections.js
+    |       getActorANdMovie.js
+    |       
+    +---assets
+    |       back.jpg
+    |       kevinapp.PNG
+    |       logo.png
+    |       logo2.png
+    |       react.svg
+    |       
+    +---components
+    |       ConnectionCard.jsx
+    |       ConnectionCards.jsx
+    |       Layout.jsx
+    |       Navbar.jsx
+    |       
+    +---hooks
+    |       useActorById.js
+    |       useActors.js
+    |       useConnections.js
+    |       useMovieById.js
+    |       
+    +---pages
+    |       AboutPage.jsx
+    |       HomePage.jsx
+    |       
+    \---routes
+            router.jsx
+            
