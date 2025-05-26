@@ -28,14 +28,6 @@ function HomePage() {
 
 
 
-
-    const selectActFromAutoComplete = (name) => {
-    setSuggestions([]);
-    setInputValue1(name);
-    setDropdownMenu1(false);
-  };
-
-
   const handleSelect1 = (actor) => {
     setInputValue1(actor.primaryName);
     setActor1(actor)

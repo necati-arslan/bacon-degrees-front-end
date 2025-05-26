@@ -16,7 +16,7 @@ export const useConnections = (fromId, toId) => {
 
     getConnectionsActors(fromId, toId) 
       .then((result) => setData(result))
-      .catch((err) => setError(err.message || "Bilinmeyen hata"))
+      .catch((err) => setError(err.message || "Unknown error"))
       .finally(() => setLoading(false));
   }, [fromId, toId]);
 
