@@ -6,7 +6,7 @@
 
 ![Uygulama Önizlemesi](src/assets/kevinapp.PNG)
 
-## 📁 Proje Structure
+## 📁 Project Folder Structure
 
 ```
 📦 proje-kök-klasörü
