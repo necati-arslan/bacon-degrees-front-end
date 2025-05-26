@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-# React + Vite
+# 🎬 Kevin Bacon Degree Applicatie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> _"Er wordt gezegd dat je van de ene filmacteur naar een andere kunt gaan via maximaal zes connecties op basis van films waarin ze samen hebben gespeeld. Dit wordt ook wel de Kevin Bacon Degree genoemd. Denk je dat dit klopt? Wil je het uitproberen? Dan is deze applicatie echt iets voor jou! Kies gewoon twee acteurs uit de vakjes en bekijk het resultaat. Veel succes!"_
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# bacon-degrees-front-end
->>>>>>> d34750047f9c5f08f1bc36b7fd98cc73073923e1
