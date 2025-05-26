@@ -4,4 +4,4 @@
 
 ---
 
-![Uygulama Önizlemesi](assets/kevinapp.PNG)
+![Uygulama Önizlemesi](src/assets/kevinapp.PNG)
