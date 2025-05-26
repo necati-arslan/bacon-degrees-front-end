@@ -5,5 +5,5 @@
 ---
 
 <p align="center">
-  <img src="assets/kevinapp.png"  width="600"/>
+  <img src="assets/kevinapp.PNG"  width="600"/>
 </p>
