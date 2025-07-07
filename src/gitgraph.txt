@@ -3,3 +3,5 @@ test branch test 2
 testbranch 2 
 
 main branch 3 te yaptim
+
+bu text icerigi branch 4 un
